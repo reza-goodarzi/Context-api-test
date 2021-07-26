@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.6rem;
       border: none;
       cursor: pointer;
-		color: var(--color-black);
+		color: var(--color-white);
       transition: all 0.2s;
 
       display: flex;
@@ -77,6 +77,12 @@ const GlobalStyle = createGlobalStyle`
 
 	p{
 		font-size: 1.6rem;
+	}
+
+	h1{
+		font-size: 2rem;
+		font-weight: 900;
+		color: var(--color-black);
 	}
 
 
