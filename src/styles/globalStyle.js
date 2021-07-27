@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
       border-radius: 5px;
       background-color: transparent;
 		outline: none;
-		transition: all 0.2s ease;
+		transition: all 0.3s ease-in;
 		
 		&:hover{
 			color: var(--color-primary);

@@ -1,5 +1,6 @@
 import Header from "./components/Header";
-import Posts from "./page/Posts";
+import Users from "./page/users";
+// import Posts from "./page/Posts";
 import GlobalStyle from "./styles/globalStyle";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Posts />
+      {/* <Posts /> */}
+      <Users />
     </>
   );
 }
