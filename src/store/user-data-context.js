@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 const UsersDataContext = React.createContext({
 	isLoading: false,
-	startFetchData: () => { },
 	users: [
 		{
 			id: '',
