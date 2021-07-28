@@ -8,9 +8,7 @@ const UsersDataContext = React.createContext({
 			name: '',
 			username: '',
 			phone: '',
-			email: '',
-			website: '',
-			company: '',
+			address: '',
 			posts: [
 				{
 					id: '',
@@ -61,20 +59,18 @@ export const UsersDataContextProvider = ({ children }) => {
 		const getUsers = async () => {
 			const data = await getDataFromApi('https://jsonplaceholder.typicode.com/users/');
 
-			const newData = await Promise.all(data.map(async user => (
+			const transformData = await Promise.all(data.map(async user => (
 				{
 					id: user.id,
 					name: user.name,
 					username: user.username,
 					phone: user.phone,
-					email: user.email,
-					website: user.website,
-					company: user.company.name,
+					address: user.address,
 					posts: await getPosts(user.id)
 				}
 			)));
 
-			setUsers(newData);
+			setUsers(transformData);
 			setIsLoading(false);
 		};
 		getUsers();

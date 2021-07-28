@@ -11,8 +11,8 @@ const Post = ({ userId, title, text }) => {
 			<Link to={`/profile/${user.id}`} className="user">
 				<img src={`https://i.pravatar.cc/150?img=${userId}`} alt={user.name} />
 				<div className="details">
-					<p className="name">{user.name}</p>
-					<p className="username">@{user.username}</p>
+					<p className="name">{user.username}</p>
+					<p className="username">{user.phone}</p>
 				</div>
 			</Link>
 			<div className="post">
@@ -30,7 +30,7 @@ const PostStyle = styled.div`
 	.user{
 		display: flex;
 		align-items: center;
-		transform: translateX(-5%);
+		transform: translateX(-19%);
 
 		margin-top: 2rem;
 		

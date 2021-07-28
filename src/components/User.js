@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const User = ({ id, name, username }) => {
+const User = ({ id, name, username, address, phone }) => {
 	return (
 		<UserStyle>
 			<Link to={`/profile/${id}`}>
@@ -9,7 +9,8 @@ const User = ({ id, name, username }) => {
 			</Link>
 			<p className="name">{name}</p>
 			<p className="username">@{username}</p>
-			<p className="latest_activity">Active 1 day ago, 23:40</p>
+			<p className="phone">{phone}</p>
+			<p className="address">{address.city}, {address.street}, {address.suite}</p>
 			<Link to={`/profile/${id}`} className='button'>
 				View Profile
 			</Link>
@@ -52,9 +53,12 @@ const UserStyle = styled.div`
 	}
 
 	.username,
-	.latest_activity{
+	.phone,
+	.address{
 		color: var(--color-gray);
 		font-weight: 300;
+		padding: 0 1rem;
+		text-align: center;
 	}
 
 	.button{

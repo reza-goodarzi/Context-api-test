@@ -18,6 +18,8 @@ const Users = () => {
 							id={user.id}
 							name={user.name}
 							username={user.username}
+							address={user.address}
+							phone={user.phone}
 						/>
 					)
 				}
