@@ -76,13 +76,13 @@ const UserStyle = styled.div`
 		color: var(--color-primary);
 		font-weight: 300;
 
-	@media screen and (max-width: 56.25em){
-		padding: 1.3rem 7rem;
-	}
+		@media screen and (max-width: 56.25em){
+			padding: 1.3rem 7rem;
+		}
 
-	@media screen and (max-width: 37.5em){
-		padding: 1.3rem 10rem;
-	}
+		@media screen and (max-width: 37.5em){
+			padding: 1.3rem 10rem;
+		}
 
 		&:hover{
 			background-color: var(--color-primary);

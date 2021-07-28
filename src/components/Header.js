@@ -32,9 +32,9 @@ const HeaderStyle = styled.div`
 		padding: 2.5rem 1rem;
 	}
 
-	/* position: fixed;
-	width: 100%;
-	z-index: 100; */
+	position: sticky;
+	top: 0;
+	z-index: 100;
 
 	display: flex;
 `;
