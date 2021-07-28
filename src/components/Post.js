@@ -32,6 +32,13 @@ const PostStyle = styled.div`
 		align-items: center;
 		transform: translateX(-19%);
 
+		@media screen and (max-width: 56.25em){
+			transform: translateX(-17%);
+		}
+		@media screen and (max-width: 37.5em){
+			transform: translateX(-15%);
+		}
+
 		margin-top: 2rem;
 		
 		img{

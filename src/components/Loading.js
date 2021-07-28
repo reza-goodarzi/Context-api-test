@@ -19,9 +19,9 @@ const LoadingStyle = styled.div`
 	margin: 3rem 0;
 
 	.spinner {
-		border: 7px solid #f3f3f3;
+		border: .7rem solid #f3f3f3;
+		border-top: .7rem solid var(--color-primary);
 		border-radius: 50%;
-		border-top: 7px solid var(--color-primary);
 		width: 3rem;
 		height: 3rem;
 		animation: spin 2s linear infinite;

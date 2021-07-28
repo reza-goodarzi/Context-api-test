@@ -21,15 +21,15 @@ const GlobalStyle = createGlobalStyle`
 		color: var(--color-black);
 
 		@media screen and (max-width: 80em){
-			font-size: 50%;
+			font-size: 54%;
 		}
 
-		@media screen and (max-width: 61.25em){
-			font-size: 43.75%;
+		@media screen and (max-width: 56.25em){
+			font-size: 46%;
 		}
 
 		@media screen and (max-width: 37.5em){
-			font-size: 31.25%;
+			font-size: 38%;
 		}
 	}
 
@@ -55,6 +55,10 @@ const GlobalStyle = createGlobalStyle`
 
       display: flex;
       align-items: center;
+
+		@media screen and (max-width: 37.5em){
+			font-size: 2rem;
+		}
 	}
 
 	a,
@@ -77,12 +81,21 @@ const GlobalStyle = createGlobalStyle`
 
 	p{
 		font-size: 1.6rem;
+		@media screen and (max-width: 56.25em){
+			font-size: 1.8rem;
+		}
+		@media screen and (max-width: 37.5em){
+			font-size: 2.1rem;
+		}
 	}
 
 	h1{
 		font-size: 2rem;
 		font-weight: 900;
 		color: var(--color-black);
+		@media screen and (max-width: 37.5em){
+			font-size: 2.6rem;
+		}
 	}
 
 

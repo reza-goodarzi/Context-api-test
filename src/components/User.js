@@ -29,9 +29,16 @@ const UserStyle = styled.div`
 	margin: 1rem;
 
 	border-radius: 1rem;
-	/* box-shadow: 0 0 2rem #00000010; */
 	border: 1px solid #eee;
 	transition: box-shadow .2s ease-in;
+
+	@media screen and (max-width: 56.25em){
+		width: 45%;
+	}
+
+	@media screen and (max-width: 37.5em){
+		width: 100%;
+	}
 
 	&:hover{
 		box-shadow: 0 0 2rem #00000010;
@@ -68,6 +75,14 @@ const UserStyle = styled.div`
 		padding: 1rem 4rem;
 		color: var(--color-primary);
 		font-weight: 300;
+
+	@media screen and (max-width: 56.25em){
+		padding: 1.3rem 7rem;
+	}
+
+	@media screen and (max-width: 37.5em){
+		padding: 1.3rem 10rem;
+	}
 
 		&:hover{
 			background-color: var(--color-primary);

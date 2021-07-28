@@ -24,6 +24,14 @@ const HeaderStyle = styled.div`
 	background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 	padding: 1.5rem 1rem;
 
+	@media screen and (max-width: 56.25em){
+		padding: 2rem 1rem;
+	}
+
+	@media screen and (max-width: 37.5em){
+		padding: 2.5rem 1rem;
+	}
+
 	/* position: fixed;
 	width: 100%;
 	z-index: 100; */

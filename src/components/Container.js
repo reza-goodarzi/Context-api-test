@@ -18,4 +18,8 @@ const ContainerStyled = styled.div`
 	border: 1px solid #eee;
 	border-radius: 5px;
 	max-width: 72rem;
+
+	@media screen and (max-width: 56.25em){
+		max-width: 78%;
+	}
 `;

@@ -42,6 +42,14 @@ const Header = styled.div`
 	padding: 5rem;
 	background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 
+	@media screen and (max-width: 56.25em){
+		padding: 5rem 2rem;
+	}
+
+	@media screen and (max-width: 37.5em){
+		flex-direction: column;
+	}
+
 	img{
 		border-radius: 50%;
 		height: 20rem;
@@ -51,8 +59,29 @@ const Header = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		flex-wrap: wrap;
 		width: 60%;
-	
+
+		@media screen and (max-width: 45em){
+			width: 65%;
+			margin-left: 1rem;
+		}
+
+		@media screen and (max-width: 37.5em){
+			width: 80%;
+			margin-left: 0;
+			flex-direction: column;
+			margin-top: 2rem;
+		}
+
+		.group{
+			@media screen and (max-width: 37.5em){
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+			}
+		}
+
 		.group span{
 			display: flex;
 			align-items: center;

@@ -48,5 +48,9 @@ const UsersStyle = styled.section`
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
+
+		@media screen and (max-width: 56.25em){
+			max-width: 80%;
+		}
 	}
 `;
