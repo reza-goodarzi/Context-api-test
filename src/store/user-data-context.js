@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const UsersDataContext = React.createContext({
 	isLoading: false,
+	startFetchData: () => { },
 	users: [
 		{
 			id: '',
@@ -22,7 +23,7 @@ const UsersDataContext = React.createContext({
 
 export const UsersDataContextProvider = ({ children }) => {
 	const [users, setUsers] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	const getDataFromApi = async url => {
 		try {
@@ -75,8 +76,6 @@ export const UsersDataContextProvider = ({ children }) => {
 		};
 		getUsers();
 	}, []);
-
-	// const allPosts = users.map(user => user.posts).flat();
 
 	return (
 		<UsersDataContext.Provider value={

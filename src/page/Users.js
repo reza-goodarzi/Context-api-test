@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import styled from "styled-components";
+
+import Loading from "../components/Loading";
 import User from "../components/User";
 import UsersDataContext from "../store/user-data-context";
 
@@ -10,7 +12,7 @@ const Users = () => {
 			<h1>Users</h1>
 			<div className="container">
 				{ctx.isLoading ?
-					<p>Loading...</p> :
+					<Loading /> :
 
 					ctx.users.map(user =>
 						<User

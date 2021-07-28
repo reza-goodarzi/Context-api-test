@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import styled from "styled-components";
+
 import Container from "../components/Container";
+import Loading from "../components/Loading";
 import Post from "../components/Post";
 import UsersDataContext from "../store/user-data-context";
 
@@ -11,7 +13,7 @@ const Posts = () => {
 		<PostsStyle>
 			<h1>Posts</h1>
 			{ctx.isLoading ?
-				<p>Loading...</p> :
+				<Loading /> :
 				<Container>
 					{allPosts.map(post => (
 						<Post
