@@ -1,18 +1,19 @@
 import { faComments, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FontIcon } from "../styles/styles";
 
 const Header = () => {
 	return (
 		<HeaderStyle>
-			<a href="/">
+			<Link to="/">
 				<FontIcon icon={faComments} />
 				Posts
-			</a>
-			<a href="/">
+			</Link>
+			<Link to="/users">
 				<FontIcon icon={faUsers} />
 				Users
-			</a>
+			</Link>
 		</HeaderStyle>
 	);
 };
@@ -20,7 +21,7 @@ const Header = () => {
 export default Header;
 
 const HeaderStyle = styled.div`
-	background-color: var(--color-primary);
+	background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 	padding: 1.5rem 1rem;
 
 	/* position: fixed;

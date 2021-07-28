@@ -1,13 +1,18 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const User = ({ id, name, username }) => {
 	return (
 		<UserStyle>
-			<img src={`https://i.pravatar.cc/150?img=${id}`} alt={name} />
+			<Link to={`/profile/${id}`}>
+				<img src={`https://i.pravatar.cc/150?img=${id}`} alt={name} />
+			</Link>
 			<p className="name">{name}</p>
 			<p className="username">@{username}</p>
 			<p className="latest_activity">Active 1 day ago, 23:40</p>
-			<button>View Profile</button>
+			<Link to={`/profile/${id}`} className='button'>
+				View Profile
+			</Link>
 		</UserStyle>
 	);
 };
@@ -52,7 +57,7 @@ const UserStyle = styled.div`
 		font-weight: 300;
 	}
 
-	button{
+	.button{
 		border: 1px solid var(--color-primary);
 		border-radius: 2rem;
 		margin-top: 3rem;

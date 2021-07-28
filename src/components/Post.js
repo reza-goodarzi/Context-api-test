@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import UsersDataContext from "../store/user-data-context";
 
@@ -7,13 +8,13 @@ const Post = ({ userId, title, text }) => {
 
 	return (
 		<PostStyle>
-			<div className="user">
+			<Link to={`/profile/${user.id}`} className="user">
 				<img src={`https://i.pravatar.cc/150?img=${userId}`} alt={user.name} />
 				<div className="details">
 					<p className="name">{user.name}</p>
 					<p className="username">@{user.username}</p>
 				</div>
-			</div>
+			</Link>
 			<div className="post">
 				<p className="title">{title}</p>
 				<p className="text">{text}</p>
@@ -44,6 +45,7 @@ const PostStyle = styled.div`
 
 			.name{
 				text-transform: capitalize;
+				color: var(--color-black);
 				font-weight: 700;
 			}
 
