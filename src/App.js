@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Posts from "./page/Posts";
 import Users from "./page/Users";
 import Profile from "./page/Profile";
+import NotFound from "./page/NotFound";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path='/users/:id'>
           <Profile />
+        </Route>
+        <Route path='*'>
+          <NotFound />
         </Route>
       </Switch>
     </UsersDataContextProvider>
