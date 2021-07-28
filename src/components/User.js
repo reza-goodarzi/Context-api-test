@@ -49,7 +49,7 @@ const UserStyle = styled.div`
 	.name{
 		text-transform: capitalize;
 		font-weight: 600;
-		margin-top: 2rem;
+		margin: 1rem 0;
 	}
 
 	.username,
@@ -57,7 +57,7 @@ const UserStyle = styled.div`
 	.address{
 		color: var(--color-gray);
 		font-weight: 300;
-		padding: 0 1rem;
+		padding: 1px 2rem;
 		text-align: center;
 	}
 
