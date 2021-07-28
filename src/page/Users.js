@@ -1,19 +1,26 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import User from "../components/User";
+import UsersDataContext from "../store/user-data-context";
 
 const Users = () => {
+	const ctx = useContext(UsersDataContext);
 	return (
 		<UsersStyle>
 			<h1>Users</h1>
 			<div className="container">
-				<User />
-				<User />
-				<User />
-				<User />
-				<User />
-				<User />
-				<User />
-				<User />
+				{ctx.isLoading ?
+					<p>Loading...</p> :
+
+					ctx.users.map(user =>
+						<User
+							key={user.id}
+							id={user.id}
+							name={user.name}
+							username={user.username}
+						/>
+					)
+				}
 			</div>
 		</UsersStyle>
 	);

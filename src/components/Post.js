@@ -1,20 +1,22 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import UsersDataContext from "../store/user-data-context";
 
-const Post = () => {
+const Post = ({ userId, title, text }) => {
+	const user = useContext(UsersDataContext).users.find(user => user.id === userId);
+
 	return (
 		<PostStyle>
 			<div className="user">
-				<img src="https://i.pravatar.cc/100" alt="user" />
+				<img src={`https://i.pravatar.cc/150?img=${userId}`} alt={user.name} />
 				<div className="details">
-					<p className="name">James Dean</p>
-					<p className="release_date">2 weeks ago</p>
+					<p className="name">{user.name}</p>
+					<p className="username">@{user.username}</p>
 				</div>
 			</div>
 			<div className="post">
-				<p className="title">sunt aut facere repellat provident occaecati excepturi optio reprehenderit</p>
-				<p className="text">
-					quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto
-				</p>
+				<p className="title">{title}</p>
+				<p className="text">{text}</p>
 			</div>
 		</PostStyle>
 	);
@@ -27,6 +29,7 @@ const PostStyle = styled.div`
 	.user{
 		display: flex;
 		align-items: center;
+		transform: translateX(-5%);
 
 		margin-top: 2rem;
 		
@@ -34,19 +37,17 @@ const PostStyle = styled.div`
 			border: 2px solid #eee;
 			border-radius: 50%;
 			width: 6.5rem;
-			
-			transform: translateX(-50%);
 		}
 
 		.details{
-			transform: translateX(-25%);
+			margin-left: 1rem;
 
 			.name{
 				text-transform: capitalize;
 				font-weight: 700;
 			}
 
-			.release_date{
+			.username{
 				color: #aaa;
 				font-weight: 300;
 			}

@@ -1,17 +1,26 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import Post from "../components/Post";
+import UsersDataContext from "../store/user-data-context";
 
 const Posts = () => {
+	const ctx = useContext(UsersDataContext);
+	const allPosts = ctx.users.map(user => user.posts).flat();
 	return (
 		<PostsStyle>
 			<h1>Posts</h1>
 			<div className="container">
-				<Post />
-				<Post />
-				<Post />
-				<Post />
-				<Post />
-				<Post />
+				{ctx.isLoading ?
+					<p>Loading...</p> :
+					allPosts.map(post => (
+						<Post
+							key={post.id}
+							userId={post.userId}
+							title={post.title}
+							text={post.text}
+						/>
+					))
+				}
 			</div>
 		</PostsStyle>
 	);

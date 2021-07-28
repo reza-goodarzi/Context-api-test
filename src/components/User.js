@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-const User = () => {
+const User = ({ id, name, username }) => {
 	return (
 		<UserStyle>
-			<img src="https://i.pravatar.cc/150" alt="user" />
-			<p className="name">james dean</p>
-			<p className="username">@bret</p>
+			<img src={`https://i.pravatar.cc/150?img=${id}`} alt={name} />
+			<p className="name">{name}</p>
+			<p className="username">@{username}</p>
 			<p className="latest_activity">Active 1 day ago, 23:40</p>
 			<button>View Profile</button>
 		</UserStyle>

@@ -5,7 +5,7 @@ import { FontIcon } from "../styles/styles";
 function ProfileHeader() {
 	return (
 		<Header>
-			<img src="https://i.pravatar.cc/300" alt="Profile" />
+			<img src={`https://i.pravatar.cc/300?img=9`} alt="Profile" />
 
 			<div className="information">
 				<div className="group">
@@ -56,7 +56,7 @@ const Header = styled.div`
 		border-radius: 50%;
 		height: 20rem;
 	}
-	
+
 	.information{
 		display: flex;
 		align-items: center;
