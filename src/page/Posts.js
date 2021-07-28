@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
+import Container from "../components/Container";
 import Post from "../components/Post";
 import UsersDataContext from "../store/user-data-context";
 
@@ -9,19 +10,19 @@ const Posts = () => {
 	return (
 		<PostsStyle>
 			<h1>Posts</h1>
-			<div className="container">
-				{ctx.isLoading ?
-					<p>Loading...</p> :
-					allPosts.map(post => (
+			{ctx.isLoading ?
+				<p>Loading...</p> :
+				<Container>
+					{allPosts.map(post => (
 						<Post
 							key={post.id}
 							userId={post.userId}
 							title={post.title}
 							text={post.text}
 						/>
-					))
-				}
-			</div>
+					))}
+				</Container>
+			}
 		</PostsStyle>
 	);
 };
@@ -38,11 +39,4 @@ const PostsStyle = styled.section`
 	h1{
 		margin-bottom: 4rem;
 	}
-
-	.container{
-		border: 1px solid #eee;
-		border-radius: 5px;
-		max-width: 72rem;
-	}
-
 `;

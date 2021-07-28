@@ -1,41 +1,31 @@
-import { faAt, faBuilding, faEnvelope, faPhone, faUser, faWindowRestore } from "@fortawesome/free-solid-svg-icons";
+import { faAt, faMapMarkerAlt, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import { FontIcon } from "../styles/styles";
 
-function ProfileHeader() {
+function ProfileHeader({ id, name, username, address, phone }) {
 	return (
 		<Header>
-			<img src={`https://i.pravatar.cc/300?img=9`} alt="Profile" />
+			<img src={`https://i.pravatar.cc/300?img=${id}`} alt={name} />
 
 			<div className="information">
 				<div className="group">
 					<span className="name">
 						<FontIcon icon={faUser} />
-						<p>james dean</p>
+						<p>{name}</p>
 					</span>
 					<span className="username">
 						<FontIcon icon={faAt} />
-						<p>james</p>
+						<p>{username}</p>
 					</span>
 				</div>
 				<div className="group">
 					<span className="email">
-						<FontIcon icon={faEnvelope} />
-						<p>james@gmail.com</p>
+						<FontIcon icon={faMapMarkerAlt} />
+						<p>{address.city}, {address.street}, {address.suite}</p>
 					</span>
 					<span className="phone">
 						<FontIcon icon={faPhone} />
 						<p>9524582346</p>
-					</span>
-				</div>
-				<div className="group">
-					<span className="website">
-						<FontIcon icon={faWindowRestore} />
-						<p>www.james.com</p>
-					</span>
-					<span className="company">
-						<FontIcon icon={faBuilding} />
-						<p>james company</p>
 					</span>
 				</div>
 			</div>

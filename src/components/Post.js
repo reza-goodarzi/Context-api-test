@@ -8,7 +8,7 @@ const Post = ({ userId, title, text }) => {
 
 	return (
 		<PostStyle>
-			<Link to={`/profile/${user.id}`} className="user">
+			<Link to={`/users/${user.id}`} className="user">
 				<img src={`https://i.pravatar.cc/150?img=${userId}`} alt={user.name} />
 				<div className="details">
 					<p className="name">{user.username}</p>

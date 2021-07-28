@@ -19,7 +19,7 @@ function App() {
         <Route path='/users' exact>
           <Users />
         </Route>
-        <Route to='/profile/:id' exact>
+        <Route path='/users/:id'>
           <Profile />
         </Route>
       </Switch>

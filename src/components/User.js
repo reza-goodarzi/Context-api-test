@@ -4,14 +4,14 @@ import styled from "styled-components";
 const User = ({ id, name, username, address, phone }) => {
 	return (
 		<UserStyle>
-			<Link to={`/profile/${id}`}>
+			<Link to={`/users/${id}`}>
 				<img src={`https://i.pravatar.cc/150?img=${id}`} alt={name} />
 			</Link>
 			<p className="name">{name}</p>
 			<p className="username">@{username}</p>
 			<p className="phone">{phone}</p>
 			<p className="address">{address.city}, {address.street}, {address.suite}</p>
-			<Link to={`/profile/${id}`} className='button'>
+			<Link to={`/users/${id}`} className='button'>
 				View Profile
 			</Link>
 		</UserStyle>
